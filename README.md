@@ -50,15 +50,12 @@ Saya Muhammad Hafidh Fadhilah dengan NIM 2305672 mengerjakan Tugas Praktikum 6 d
   - `int velocityY`: Kecepatan vertikal (naik/turun) burung.
 
 # Alur Program Floppy Bird
-
 ## 1. Program Dimulai
-
 - User menjalankan program melalui `App.java`.
 - Di dalam `main` method pada `App.java`, method `StartMenu.showStartMenu()` dipanggil.
 - Method ini menampilkan **Start Menu GUI** berisi judul dan tombol “Start Game”.
 
 ## 2. User Menekan Tombol "Start Game"
-
 - Ketika tombol "Start Game" ditekan:
   - Window Start Menu akan ditutup (`dispose()`).
   - Jendela baru untuk game akan dibuat (`JFrame` berjudul “Floppy Bird”).
@@ -66,7 +63,6 @@ Saya Muhammad Hafidh Fadhilah dengan NIM 2305672 mengerjakan Tugas Praktikum 6 d
   - Game window ditampilkan ke layar.
 
 ## 3. Game Dimulai (`FlappyBird.java`)
-
 - Di dalam konstruktor `FlappyBird`:
   - Ukuran dan layout panel diatur.
   - Key listener ditambahkan agar panel bisa menangkap input keyboard.
@@ -76,7 +72,6 @@ Saya Muhammad Hafidh Fadhilah dengan NIM 2305672 mengerjakan Tugas Praktikum 6 d
   - Timer `gameLoop` berjalan 60 kali per detik untuk mengupdate dan me-render ulang game.
 
 ## 4. Selama Game Berjalan
-
 - Setiap tick dari `gameLoop`:
   - Method `actionPerformed()` dipanggil → `move()` dan `checkCollision()` dipanggil jika game belum game over.
   - `move()` menggerakkan player (terkena gravitasi) dan memindahkan posisi semua pipa ke kiri.
@@ -85,18 +80,15 @@ Saya Muhammad Hafidh Fadhilah dengan NIM 2305672 mengerjakan Tugas Praktikum 6 d
   - Jika terjadi tabrakan → `isGameOver = true`.
 
 ## 5. Saat Game Over
-
 - Layar akan menampilkan pesan “Game Over” dan “Press R to Restart”.
 - Program akan tetap berjalan tapi tidak memproses input Space.
 
 ## 6. Restart Game
-
 - Jika pemain menekan tombol **R**, maka method `resetGame()` dipanggil:
   - Posisi dan kecepatan player di-reset.
   - Semua pipa dihapus.
   - Skor di-reset ke 0.
   - Game kembali berjalan seperti awal.
-
 
 # Dokumentasi
 ## Menu Utama
